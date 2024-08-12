@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Portfolio</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="./index.js"></script>
+</head>
+<body>
+<style>
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.header {
+    background-image: url('bigg2.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.header-content h1 {
+    font-size: 4em;
+    margin: 0;
+}
+
+.header-content p {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.header-content .btn {
+    background-color: #ff9900;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+.header-content .btn:hover {
+    background-color: #e68a00;
+}
+
+.portfolio, .skills, .contact {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: white;
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.portfolio-item {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+}
+
+.portfolio-item-info {
+    padding: 15px;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+}
+
+.skills-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.skill-item {
+    background-color: #ff9900;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact input, .contact textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100%;
+}
+
+.contact button {
+    background-color: #ff9900;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background-color: #e68a00;
+}
+</style>
+
+    <header class="header">
+        <div class="header-content">
+            <h1>Navya</h1>
+            <p>Web Developer & Designer</p>
+            <a href="#portfolio" class="btn">View My Work</a>
+        </div>
+    </header>
+
+    <section id="portfolio" class="portfolio">
+        <h2>My Work</h2>
+        <div class="portfolio-items">
+            <div class="portfolio-item">
+                <img src="recipe fead 2.jpg" alt="Project 1">
+                <div class="portfolio-item-info">
+                    <h3>Project 1</h3>
+                    <p>Here is the my first project and i did this using html,css and javascript.It is a landingpage of a restaurant which shows the menu in the restaurant.</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="Screenshot 2024-03-22 153654.png" alt="Project 2">
+                <div class="portfolio-item-info">
+                    <h3>Project 2</h3>
+                    <p>This is Registration form which is used to fill the form for any websites and registrations.I done this using HTML,css and javascript.</p>
+                </div>
+            </div>
+            <!-- Add more portfolio items as needed -->
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <div class="skills-list">
+            <div class="skill-item">
+                <h3>HTML & CSS</h3>
+            </div>
+            <div class="skill-item">
+                <h3>JavaScript</h3>
+            </div>
+            <div class="skill-item">
+                <h3>React</h3>
+            </div>
+            <div class="skill-item">
+                <h3>Node.js</h3>
+            </div>
+            <!-- Add more skills as needed -->
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+<script>
+document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+</script>
+</body>
+</html>
